@@ -1,0 +1,141 @@
+.navegator{
+	height: 100%;
+	width: 100%;
+	max-width: 300px;
+	background: #fff;
+	padding:2rem 0;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: transform .5s ease;
+	>ul{
+		overflow-y: auto;
+	}
+	z-index: 50;
+}
+span ~ ul.sub-categories.active{
+	background-color: red;
+}
+li.active::after{
+	content: "";
+	width: 5px;
+	height: 100%;
+	position:absolute;
+	right: 0;
+	top:0;
+	background: #1690E8;
+}
+.categorie>img{
+	transition: transform .5s ease;
+}
+.categorie.activeArrow>img{
+	transform: rotate(90deg);
+}
+
+
+ul{
+	list-style:none;
+}
+li{
+	position: relative;
+}
+
+.categorie:hover,.sub-categorie:hover{
+	background-color: rgb(233, 233, 233);
+	cursor:pointer;
+}
+.categorie,.sub-categorie{
+	display:inline-block;
+	width: 100%;
+	padding: 1rem 2rem;
+	color: #6B6F72;
+	display: flex;
+	justify-content: space-between;
+	text-decoration: none;
+	position: relative;
+}
+.categorie.active,.sub-categorie.active{
+	img{
+		display: none;
+	}
+	&::after{
+		content: "";
+		width: 5px;
+		height: 100%;
+		background-color: $firstColor;
+		top: 0;
+		right: 32px;
+		position: absolute;
+	}
+}
+.sub-categorie{
+	padding-left: 3.25rem;
+}
+
+
+/* footer help */
+
+
+.social-network{
+	width: 100%;
+	display:flex;
+	padding: 1rem 2rem 0 2rem;
+}
+
+.social-network div{
+	margin:0 8px 0 0;
+	width: 30px;
+	height:30px;
+	background-color: #1690E8;
+}
+
+.social-network div span{
+	color:#fff;
+}
+
+.sub-categories{
+	transform-origin: center top;
+	transition: height .5s ease;
+	height: 0;
+	overflow: hidden;
+}
+@for $i from 1 to 6{
+	.sub-categories.active-#{$i}{
+		height: 51px * $i;
+	}
+}
+
+/* down help */
+
+.help a{
+	margin-top: 1rem;
+	padding: 0 2rem;
+	white-space: nowrap;
+}
+
+@media screen and (max-width:$mediaDesktop){
+	.navegator{
+		max-width: none;
+		position: absolute;
+		height: calc(100% - 65px);
+		transform: translateY(-100%);
+	}
+	.navegator.active{
+		transform: translateY(0);
+	}
+	.nav-down>*{
+		display: flex;
+		
+		justify-content: center;
+	}
+	.social-network div{
+		margin:0 8px;
+	}
+	.help{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+}

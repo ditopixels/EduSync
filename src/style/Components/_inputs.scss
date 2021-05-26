@@ -1,0 +1,65 @@
+form{
+    background-color: inherit ;
+}
+[inputAnimated]{
+    background-color: inherit;
+    color: $subtitle;
+    font-size: 1rem;
+    display: flex;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    span.placeholder{
+        background-color: transparent;
+        user-select: none;
+        color: inherit;
+        position: absolute;
+        padding: 8px 10px;
+        white-space: nowrap;
+        top: 0;
+        left: 0;
+        transition: 
+            font-size .1s,
+            color .1s,  
+            top .1s, 
+            left .1s,
+            padding .1s;
+    }
+    input{
+        border-radius: 4px;
+        width: 100%;
+        border: 1px solid $firstColor;
+        outline: none;
+        padding: 8px 10px;
+        transition: border .1s;
+    }
+    input:invalid ~ span{
+        color: $err;
+        background-color: white;
+    }
+    input:invalid{
+        border-color: $err;
+    }
+    span.eye{
+        padding: 8px 10px;
+        position: absolute;
+        right:0;
+    }
+    span.eye:hover{cursor: pointer;}
+    &.focus{
+        border-color: $firstColor;
+        color: $firstColor;
+        span.placeholder{
+            left:6px;
+            font-size: .85rem;
+            top:-.65rem;
+            padding: 0 2px;
+            background-color: white;
+        }
+        
+    }
+    &:hover{
+        cursor: text;
+    }
+}

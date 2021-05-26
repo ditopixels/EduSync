@@ -1,0 +1,72 @@
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &-port {
+        width: 100%;
+        background-color: rgb(209, 209, 209);
+        height: 160px;
+    }
+    &-prebody {
+        background-color: #fff;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $text;
+        margin-bottom: 1rem;
+    }
+}
+
+.page-body {
+    display: grid;
+    grid-template-columns: 1fr 225px;
+    &_content {
+        margin-right: 2rem;
+    }
+}
+
+.page-aside {
+    display: inline-block;
+    background-color: #fff;
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    h4 {
+        color: $text;
+        font-size: 1.1rem;
+    }
+    p {
+        color: $text;
+    }
+    .aside-div,
+    .network {
+        display: flex;
+        flex-direction: column;
+    }
+    .aside-div {
+        margin-bottom: 1rem;
+    }
+    .network a {
+        text-decoration: none;
+        color: $text;
+        i {
+            margin-right: 5px;
+        }
+    }
+    .network a:hover {
+        color: $firstColor;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .page-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        &_content {
+            margin-right: 0;
+        }
+    }
+}

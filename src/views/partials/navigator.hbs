@@ -1,0 +1,39 @@
+<nav class="navegator">
+    <ul>
+        {{#each navegator}}
+            {{#if this.subCategories}}
+                <li class="categories dropdown">
+                    <span class="categorie">
+                        {{this.categorie}}
+                        <img class="arrow" src="/images/arrow.svg" alt="arrow navegator">
+                    </span>
+                    
+                    <ul class="sub-categories">
+                        {{#each this.subCategories}}
+                            <li>
+                                <a {{#if this.class}}class='sub-categorie {{this.class}}'{{else}}class="sub-categorie"{{/if}} href="{{this.path}}">
+                                    {{this.subCategorie}}
+                                    <img class="arrow" src="/images/arrow.svg" alt="arrow navegator">
+                                </a>
+                                
+                            </li>
+                        {{/each}}
+                    </ul>
+                </li>
+            {{else}}
+                <li class="categories">
+                    <a {{#if this.class}}class='categorie {{this.class}}'{{else}}class="categorie"{{/if}} href={{this.path}}>
+                        {{this.categorie}}
+                        <img class="arrow" src="/images/arrow.svg" alt="arrow navegator">
+                    </a>
+                </li>
+            {{/if}}   
+        {{/each}}
+    </ul>
+    <div class="nav-down">
+        <div class="help">
+            <a class="link-gray" href="/docs">Centro de ayuda</a>
+            <a class="link-gray" href="#">Reportar fallo</a>
+        </div>
+    </div>
+</nav>

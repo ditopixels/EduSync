@@ -1,0 +1,154 @@
+const fs = require('fs')
+
+fs.writeFile('path/nameFile',contenido,(err)=>{ callback })
+
+promise
+
+	return new Promise((resolve,reject)=>{
+		if(err)reject('hubo un error')
+		resolve('Promesa cumplida')
+	})
+
+module -> module.exports
+process -> process.argv //para recibir parametros en la consola
+
+require('yargs').command('listar','imprime consola tabla',{
+	base:{
+		demand:true,
+		alias:'b',
+		default: 10
+	}
+}).help().argv
+
+git .gitignore
+
+	database/*.txt  todos los archivos dentro de database cone xtension .txt
+
+
+schema.methods.toJSON = function(){
+	const user = this;
+	const userObject = user.toObject();
+	delete 
+	return userObject
+}
+
+validaciones:
+	enum -> ['value','value2'] -> {[values],message:""}
+	validator: {validation:function, message:,etc}
+	unique:true
+	
+
+findAndUpdate(parameter, data, options,callback)
+
+options -> {runValidation:true, new:true}
+
+	let desde = req.query.desde || 0;
+	desde = Number(desde)
+
+Usuario.find({condition},'nombre email')
+	.skip(5)
+	.limit(5)
+	.exec((err,usuarios)=>{
+		Usuario.count({condition},(err,conteo)=>{
+		
+		})
+	})
+
+
+npm install jsonnwebtoken :)
+
+const jwt = require('jsonwebtoken')
+
+let token = jwt.sign({
+	data
+},'secret',{expireIn:60*60*24*30})
+
+res.json({
+	ok:true,
+	data,
+	token
+ })
+
+obtener encabezado
+
+req.get('header')
+
+jwt.verify(token,seed,(err,decoded)=>{
+
+})
+
+
+Signin with Google -> google sign-in for websites developer
+
+Categoria.find({}).exec((err,categorias)=>{
+	
+})
+.sort('descripcion')
+
+schema -> {
+	categoria: {type:Schema.Type.Objectid, ref:'Usuario'}
+}
+.populate('usuario', 'nombre email')
+
+
+let regex = new RegExp(termino,'i')
+
+express-fileupload
+
+app.use(fileUpload())
+
+req.files //ahi vendran los archivos 
+archivo = req.files.nameFileReq
+archivo.mv('path',(err)=>{console.log(err)})
+
+validateExt = ['png',jpg,'jpeg','pdf']
+nombreArchivo = archivo.name.split'.');
+ext = nombreArchivo[length -1]
+
+fs.existsSync(path)
+fs.unlinkSync(path)
+res.sendFile(path)
+
+Scokets
+
+http.createServer(app)
+
+let io = socketIO(server)
+
+server.listen
+
+FRONT
+
+
+script src='socket.io/socket.io.js'
+<script>
+	var socket = io();
+	socket.on('connect',()=>{
+		//conectado con el servidor
+	})
+	socket.on('disconnect',()=>{
+		//el servidor se ha desconectado
+	})
+	socket.emit('enviarMensaje',{
+		usuario:'Juan'.
+		message:'Hola papa'
+	})
+	socket.on('enviarMensaje',(message,callback)=>{
+		callback()
+	})
+</script>
+
+BACK
+io.on('connection',(client)=>{
+	//Usuario conectado
+	client.on('disconnect',()=>{
+		//Usuario desconectado
+	})
+	client.on('enviarMensaje',(message)=>{
+	
+	})
+	client.emit('enviarMensaje',{data},()=>{
+	
+	})
+	client.broadcast.emit('enviarMensaje',data )
+})

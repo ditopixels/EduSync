@@ -1,0 +1,27 @@
+.msg{
+    width: 100%;
+    padding:10px 10px 10px 5px;
+    font-size: 14px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    img{
+        margin: 0 10px;
+    }
+    span{
+        width: 100%;
+    }
+}
+.msg-blue{
+    background-color: #BDE3FF;
+    color: $firstColor;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: $firstColor;
+    }
+}

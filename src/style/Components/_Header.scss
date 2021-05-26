@@ -1,0 +1,53 @@
+.header{
+	width: 100%;
+	height: 65px;
+	background-color: #fff;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	box-shadow: 0px 1px 6px rgba(132, 132, 132, 0.5);
+	position: relative;
+	z-index:999;
+	&>div{
+		position: relative;
+		padding-right: $padWrapperDesktop;
+    	padding-left: $padWrapperDesktop;
+		height: 100%;
+	}
+}
+.logo{
+	display:flex;
+	font-size: 1.1rem;
+    align-items: center;
+	justify-content: center;
+	span{
+		font-weight: bold;
+	}
+	img{
+		width: 40px;
+		margin-right:.5rem;
+	}
+}
+
+.header-content{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	>img{
+		width: 2rem;
+		display:none;
+	}
+	>img:hover{
+		opacity: .8;
+		cursor: pointer;
+	}
+}
+@media screen and (max-width:$mediaDesktop){
+	.header-content{
+		>div{
+			display: none;
+		}
+		>img{
+			display: block;
+		}
+	}
+}
