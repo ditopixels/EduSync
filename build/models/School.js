@@ -1,31 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _mongoose = _interopRequireDefault(require("mongoose"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-var Schema = _mongoose["default"].Schema,
-    model = _mongoose["default"].model;
-var schema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  code: {
-    type: String,
-    required: true
-  }
-  /*
-  AQUI VAN LOS OTROS CAMPOS QUE SE PUEDEN HACER DESPUES DEL REGISTRO
-  */
-
-});
-
-var _default = model('School', schema);
-
-exports["default"] = _default;
+"use strict";var _mongoose=_interopRequireDefault(require("mongoose"));Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var Schema=_mongoose["default"].Schema,model=_mongoose["default"].model,schema=new Schema({name:{type:String,required:!0},code:{type:String,required:!0}/*
+    AQUI VAN LOS OTROS CAMPOS QUE SE PUEDEN HACER DESPUES DEL REGISTRO
+    */}),_default=model("School",schema);exports["default"]=_default;

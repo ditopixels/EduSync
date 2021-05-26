@@ -1,0 +1,29 @@
+{{>header}}
+
+
+{{#each errors}}
+    <div class="error">
+        {{text}}
+        <button>x</button>
+    </div>
+{{/each}}
+<div class="sign">
+    <form action="/signup" method="POST">
+        <h2>¡Registrate gratis!</h2>
+        <div>
+            {{>input type="text" placeholder="Nombre de la institución" name="name" value=name}}
+            {{>input type="text" placeholder="Codigo" name="code" value=code}}
+
+            {{>input type="text" placeholder="Username" name="username" value=username}}
+            
+            {{>input type="password" placeholder="Contraseña" name="password" value=password}}
+            {{>input type="password" placeholder="Confirmar contraseña" name="confirm_password"}}
+            
+            {{>input type="email" placeholder="Correo electronico" name="email" value=email}}
+        </div>
+        <div class="center margin-top">
+            <button class="button">Inscribirse</button>
+        </div>
+
+    </form>
+</div>

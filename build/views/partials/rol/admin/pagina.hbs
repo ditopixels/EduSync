@@ -1,0 +1,84 @@
+<div class="page">
+    <div class="page-port">
+        {{#if page.port}}
+            <img src="{{page.port}}" alt="Portada institucion">
+        {{/if}}
+    </div>
+    <div class="page-prebody paddX-2">
+        <nav class="directory" data-tab="page">
+            <ul class="tabs">
+                <li class="tab">Posts</li>
+                <li class="tab">Información</li>
+            </ul>
+        </nav>
+        {{>search placeholder="Buscar post"}}
+    </div>
+    <div class="page-body paddX-2">
+        <div class="page-body_content" data-tab_content="page">
+
+            <div id="Posts">
+                
+                {{#each posts}}
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="post-header_content">
+                                <img src={{this.autor.url}} alt="Autor">
+                                <div class="post-header_info">
+                                    <h3>{{this.title}}</h3>
+                                    <h4>{{this.autor.name}}</h4>
+                                </div>
+                            </div>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-content-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor provident molestiae soluta esse doloremque officiis ullam labore aliquam facere cumque.
+                            </div>
+                            <div class="post-content-collage">
+                                {{#if images}}
+                                    {{#each images}}
+                                        <img src={{this.url}} alt={{this.alt}}>
+                                    {{/each}}
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+
+            </div>
+
+            <div id="Información">
+
+            </div>
+
+        </div>
+        <aside class="page-aside paddY-75 paddX-75">
+            <div class="aside-div">
+                <h4>Información</h4>
+                <p>Direccion: calle 95#43a 35</p>
+                <p>Telefono: 5219531</p>
+            </div>
+            <div class="aside-div">
+                <h4>Redes sociales</h4>
+                <div class="network">
+                    <a href=""> 
+                        <i class="fab fa-facebook-square"></i>
+                        Facebook
+                    </a>
+                    <a href=""> 
+                        <i class="fab fa-whatsapp-square"></i>
+                        Whatsapp
+                    </a>
+                    <a href=""> 
+                        <i class="fab fa-youtube-square"></i>
+                        YouTube
+                    </a>
+                    <a href=""> 
+                        <i class="fas fa-pager"></i>
+                        Página web
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>

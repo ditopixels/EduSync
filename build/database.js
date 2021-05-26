@@ -1,18 +1,1 @@
-"use strict";
-
-var _mongoose = _interopRequireDefault(require("mongoose"));
-
-var _config = require("./config.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-_mongoose["default"].connect(_config.config.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true
-}).then(function (db) {
-  return console.log('Mongodb is connected to', db.connection.host);
-})["catch"](function (e) {
-  return console.log(e);
-});
+"use strict";var _mongoose=_interopRequireDefault(require("mongoose")),_config=require("./config.js");function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}_mongoose["default"].connect(_config.config.MONGODB_URI,{useNewUrlParser:!0,useUnifiedTopology:!0,useFindAndModify:!1,useCreateIndex:!0}).then(function(a){return console.log("Mongodb is connected to",a.connection.host)})["catch"](function(a){return console.log(a)});

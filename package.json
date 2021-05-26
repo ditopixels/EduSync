@@ -7,7 +7,7 @@
         "start": "node build/index",
         "dev": "nodemon src/index --exec babel-node",
         "style": "node-sass -w src/style -o src/public/css --output-style compressed",
-        "build": "babel src -d build"
+        "build": "babel src -d build && node-sass src/style -o build/public/css --output-style compressed"
     },
     "repository": {
         "type": "git",
@@ -44,6 +44,7 @@
         "@babel/core": "^7.14.0",
         "@babel/node": "^7.13.13",
         "@babel/preset-env": "^7.14.1",
+        "babel-minify": "^0.5.1",
         "nodemon": "^2.0.7"
     }
 }

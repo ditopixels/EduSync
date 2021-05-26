@@ -1,11 +1,1 @@
-"use strict";
-
-require("./database.js");
-
-var _app = _interopRequireDefault(require("./app.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-_app["default"].listen(_app["default"].get('port'), function (req, res) {
-  console.log('Server on port', _app["default"].get('port'));
-});
+"use strict";var _app=_interopRequireDefault(require("./app.js"));require("./database.js");function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}_app["default"].listen(_app["default"].get("port"),function(){console.log("Server on port",_app["default"].get("port"))});

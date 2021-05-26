@@ -1,0 +1,19 @@
+
+<h3>Bienvenido {{data.username}}</h3>
+<span>Admin panel</span>
+
+{{#if data.courses}}
+    <div class="courses">
+        {{#each data.courses}}
+            <div class="course card">
+                <div class="course-head">
+                    <span>{{this.name}}</span>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{else}}
+    {{>noContent}}
+{{/if}}
+
+

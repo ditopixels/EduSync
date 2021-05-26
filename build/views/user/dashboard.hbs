@@ -1,0 +1,9 @@
+<div class="dash">
+    {{>header}}
+    <div class="dashContent space-between">
+        {{>navigator}}
+        <main class="rol">
+            {{>(contentRol.partial) args=contentRol.args}}
+        </main>
+    </div>
+</div>
