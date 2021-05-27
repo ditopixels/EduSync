@@ -1,14 +1,14 @@
 <div class="profile">
     <span class="profile-name">{{data.username}}</span>
-    <img class="profile-img"src="/images/User.svg" alt="imagen del usuario">
+    <img class="profile-img"src="{{host}}/images/User.svg" alt="imagen del usuario">
     <div class="profile-dropdown">
         <ul>
-            <li><a class="categorie"href="/app/perfil">Mi perfil</a></li>
-            <li><a class="categorie"href="/app/instituciones">Buscar institución</a></li>
+            <li><a class="categorie"href="{{host}}/app/perfil">Mi perfil</a></li>
+            <li><a class="categorie"href="{{host}}/app/instituciones">Buscar institución</a></li>
             {{#each profile.options}}
-            <li><a class="categorie"href="/app/perfil">Mi perfil</a></li>
+            <li><a class="categorie"href="{{host}}/app/perfil">Mi perfil</a></li>
             {{/each}}
-            <li><a class="categorie"href="/logout">Cerra sesión</a></li>
+            <li><a class="categorie"href="{{host}}/logout">Cerra sesión</a></li>
         </ul>
     </div>
 </div>

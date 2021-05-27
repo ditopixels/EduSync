@@ -13,3 +13,5 @@ export const config = {
     PORT: process.env.PORT || 4000,
     MONGODB_URI: 'mongodb+srv://edusync:PsvlSl19zkq47AzG@edusync-cluster.8v5ev.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' || `mongodb://${configDB.MONGODB_HOST}/${configDB.MONGODB_DATABASE}`
 };
+
+export const host = 'https://edusync.azurewebsites.net'

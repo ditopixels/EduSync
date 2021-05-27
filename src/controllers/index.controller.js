@@ -1,3 +1,5 @@
+import { host } from '../config.js'
+
 const rol = 'student'
 
 export const renderHome = (req, res) => {
@@ -14,10 +16,11 @@ export const renderHome = (req, res) => {
         },
         contentOptions: {
             partial: () => { return `rol/${rol}` },
-        }
+        },
+        host
     })
     console.log(req)
 }
 
 
-export const renderDocs = (req, res) => res.render('user/docs')
+export const renderDocs = (req, res) => res.render('user/docs', { host })

@@ -1,13 +1,13 @@
 <header class="header">
     <div class=" space-between">
         <div class="logo">
-            <img src="http://localhost:4000/images/GikEdu.svg" alt="GikEdu logo">
+            <img src="{{host}}/images/GikEdu.svg" alt="GikEdu logo">
             <span>GikEdu</span>
         </div>
         <div class="header-content">
             {{>(contentHeader.partial) args=contentHeader.args}}
             {{#if menubtn}}
-                <img id="btn-menu"src="http://localhost:4000/images/menuNav.svg" alt="menu nav">
+                <img id="btn-menu"src="{{host}}/images/menuNav.svg" alt="menu nav">
             {{/if}}
         </div>
         

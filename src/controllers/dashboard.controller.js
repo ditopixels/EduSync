@@ -1,6 +1,7 @@
 import User from '../models/Users.js'
 import School from '../models/School.js'
 import { admin as nav } from '../helpers/nav.js'
+import { host } from '../config.js'
 
 export const renderDashboard = async(req, res) => {
     const { username, email, rol } = await User.findOne({ _id: req.user._id })
@@ -36,9 +37,10 @@ export const renderDashboard = async(req, res) => {
     }
 
     data.navegator = nav(path)
+    data.host = host
 
     res.render('user/dashboard', data)
 }
 export const renderMiembros = (req, res) => {
-    res.render('members', {})
+    res.render('members', { host })
 }

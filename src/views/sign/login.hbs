@@ -1,6 +1,6 @@
 {{>header}}
 <div class="sign signin">
-    <form action="/signin" method="POST">
+    <form action="{{host}}/signin" method="POST">
         
             <h2>Inicia sesión</h2>
         {{>msg color='blue'textContet="Accede a GikEdu y aumenta tu eficiencia."}}
@@ -9,7 +9,7 @@
             {{>input type="password" placeholder="Contraseña" name="password" value=value}}
         </div>
         <div class="center margin-top">
-            <a class="link-blue" href="/reset-password">Recuperar contraseña</a>
+            <a class="link-blue" href="{{host}}/reset-password">Recuperar contraseña</a>
             <button class="button">Acceder</button>
         </div>
     </form>
