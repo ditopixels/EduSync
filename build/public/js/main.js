@@ -1,1 +1,12 @@
-"use strict";var _input=_interopRequireDefault(require("./components/input.js")),_Navigator=_interopRequireDefault(require("./components/Navigator.js")),_password=_interopRequireDefault(require("./components/password.js")),_file=_interopRequireDefault(require("./file.js"));function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var d=document;d.addEventListener("DOMContentLoaded",function(){(0,_input["default"])(),(0,_password["default"])(),(0,_Navigator["default"])(),(0,_file["default"])()});
+const d = document
+import animatedInputs from './components/input.js'
+import Navigator from './components/Navigator.js'
+import password from './components/password.js'
+import File from './file.js'
+
+d.addEventListener('DOMContentLoaded',()=>{
+    animatedInputs()
+    password()
+    Navigator()
+    File()
+})

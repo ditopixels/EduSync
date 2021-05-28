@@ -1,63 +1,114 @@
-.miembros{
+.miembros {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,.25);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, .25);
     overflow: hidden;
-    justify-content: space-between;
-    &-content{
-        height: 100%;
+    &-content {
         width: 100%;
-        padding:1rem 0;
+        padding-bottom: 1rem;
+        display: grid;
+        grid-template-columns: auto 2fr 1fr 1fr 1fr auto;
+        grid-auto-rows: auto;
+        overflow-y: auto;
+        row-gap: .75rem;
     }
-    &-header{
+    &-header {
         width: 100%;
-        padding:.75rem 1rem;
+        padding: .75rem 1rem;
         background-color: $firstColor;
         display: flex;
         justify-content: space-between;
         align-items: center;
         overflow-y: auto;
     }
-    &-footer{
+    &-footer {
         width: 100%;
-        padding:1rem;
+        padding: 1rem;
         display: flex;
         justify-content: flex-end;
-        >*{
+        >* {
             margin-left: .5rem;
         }
     }
 }
 
-.miembro{
+.miembros-tools {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    flex-wrap: wrap-reverse;
+    .methods {
+        display: flex;
+    }
+    .methods>* {
+        margin-right: .75rem;
+        i {
+            margin-right: .25rem;
+        }
+    }
+}
+
+.miembro {
     display: grid;
-    grid-template-columns: auto repeat(3, 1fr) auto;
-    grid-template-rows: 43px;
-    gap: 15px;
+    grid-column: span 6;
+    column-gap: .5rem;
+    grid-template-columns: subgrid;
     color: $text;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    box-shadow: 0px 2px 6px rgba(0,0,0,.25);
-    text-align: center;
-    >img.profile-img{
-        margin: 0 1rem 0 0;
-        padding: 2px 0;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, .25);
+    >img.profile-img {
+        margin: 4px 0;
     }
-    >img.arrow-down{
+    >img.arrow-down {
         width: 1rem;
         z-index: 0;
-        &:hover{
+        &:hover {
             opacity: .8;
             cursor: pointer;
         }
     }
-    >span{
+    >span {
+        color: $subtitle;
         user-select: none;
         white-space: nowrap;
     }
-    
+    >span.first-color {
+        color: $firstColor;
+    }
+    >:nth-child(2) {
+        justify-self: start;
+        text-align: left;
+    }
+    .options {
+        justify-self: end;
+        display: grid;
+        grid-template-columns: repeat(2, 1.1rem);
+        font-size: 1.1rem;
+        gap: 1rem;
+        >:hover {
+            opacity: .8;
+        }
+    }
+    .update {
+        color: $firstColor;
+    }
+    .delete {
+        color: $thirdColor;
+    }
+}
+
+@media screen and (max-width:921px) {
+    .miembros-tools {
+        .methods {
+            margin: 0 auto;
+        }
+    }
 }

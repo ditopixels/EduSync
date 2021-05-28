@@ -19,7 +19,6 @@ export const renderHome = (req, res) => {
         },
         host
     })
-    console.log(req)
 }
 
 

@@ -16,6 +16,7 @@ export function admin(path) {
 }
 
 function getNavegator(path, nav) {
+    path = path.toLowerCase().split('/')
     nav.forEach(el => {
         if (path[2] && el.categorie.toLowerCase() == path[2].toLowerCase()) {
             el.class = 'active'

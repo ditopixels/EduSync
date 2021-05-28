@@ -1,58 +1,80 @@
-.button{
-  display: inline-block;
-  white-space: nowrap;
-  background: $firstColor;
-  border-radius: 6px;
-  border: none;
-  color: #fff;
-  padding: 6px 32px;
-  font-weight: 700;
-  font-family: "Roboto",sans-serif;
-  font-size: 1rem;
-  text-decoration: none;
-  margin: auto 0;
-  transition: .3s background-color;
-}
-.button:hover{
-  opacity: .85;
-  cursor: pointer;
-}
-.button-ghost{
-    padding:6px 24px;
+.button {
+    display: inline-block;
+    white-space: nowrap;
+    background: $firstColor;
     border-radius: 6px;
-    border:2px solid $firstColor;
+    border: none;
+    color: #fff;
+    padding: 6px 32px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
     text-decoration: none;
-    color:$firstColor;
+    margin: auto 0;
+    transition: .3s background-color;
+}
+
+.button:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+.button-ghost {
+    padding: 6px 24px;
+    border-radius: 6px;
+    border: 2px solid $firstColor;
+    text-decoration: none;
+    color: $firstColor;
     display: inline-block;
     margin: auto 0;
     transition: .3s background-color;
-    &:hover{
-        background-color:$firstColor;
-        color:#fff;
+    &:hover {
+        background-color: $firstColor;
+        color: #fff;
         cursor: pointer;
     }
 }
-.link-gray{
-  color:rgba(0,0,0,.7);
-  text-decoration: none;
-  display: block;
-  &:hover{
-    text-decoration: underline;
-  }
-}
 
-.link-blue{
-  color:$firstColor;
-  display: block;
-  text-decoration: none;
-  font-size: .9rem;
-  &:hover{
-    text-decoration: underline;
-  }
-}
-
-@media screen and (min-width: $mediaDesktop){
-    .buttonGhost{
-      margin: 0;
+.link-gray {
+    color: rgba(0, 0, 0, .7);
+    text-decoration: none;
+    display: block;
+    &:hover {
+        text-decoration: underline;
     }
-  }
+}
+
+.link-blue {
+    position: relative;
+    color: $subtitle;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    &:hover {
+        color: $firstColor;
+        cursor: pointer;
+    }
+}
+
+.file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    input[type="file"] {
+        display: none;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: $mediaDesktop) {
+    .buttonGhost {
+        margin: 0;
+    }
+}

@@ -11,4 +11,7 @@
 .rol {
     width: 100%;
     overflow-y: auto;
+    &.pad {
+        padding: 2rem;
+    }
 }

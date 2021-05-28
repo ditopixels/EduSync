@@ -53,7 +53,7 @@ export const validationRegister = async(req, res) => {
     console.log(req.body)
     console.log(errors)
     if (errors.length) {
-        res.render('sign/register', { errors, username, email, password, confirm_password, host })
+        res.redirect('/signup')
     } else {
         const emailUser = await User.findOne({ email: email })
         const isCode = await School.findOne({ code })
