@@ -2,7 +2,7 @@
     {{>header}}
     <div class="dashContent space-between">
         {{>navigator}}
-        <main class="rol">
+        <main class="rol {{contentRol.args.class}}">
             {{>(contentRol.partial) args=contentRol.args}}
         </main>
     </div>

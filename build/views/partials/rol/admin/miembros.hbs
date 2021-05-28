@@ -1,20 +1,37 @@
 <div class="miembros">
+
     <header class="miembros-header">
         <h3>Miembros</h3>
-        {{>search placeholder="Buscar miembro, grupo, rol..."}}
     </header>
+
+    <div class="miembros-tools">
+        <div class="methods">
+            <button class="link-blue" id="import">
+                <i class="fas fa-upload"></i>Importar
+                <label class="file">
+                    <input type="file">
+                </label>
+            </button>
+            <button id="export" class="link-blue"><i class="fas fa-download"></i>Exportar</button>
+            <button id="add" class="link-blue"><i class="fas fa-plus"></i>Añadir</button>
+        </div>
+        {{>search placeholder="Buscar miembro, grupo, rol..."}}
+    </div>
+
     <div class="miembros-content">
-    
+        {{#each members}}
             <div class="miembro">
                 <img class="profile-img" src="{{host}}/images/User.svg" alt="Imagen usuario">
-                <span>{{data.username}}</span>
-                <span>{{data.rol}}</span>
-                <span>11-B</span>
-                <img class="arrow-down" src="{{host}}/images/arrow.svg" alt="">
-                <span></span>
+                <a class="link-blue" href="/user/{{this._id}}">{{this.username}}</a>
+                <span class="first-color">{{this.rol}}</span>
+                <span>{{this.course}}A</span>
+                <span>{{this.status}}</span>
+                <div class="options">
+                    <a href="{{this._id}}" class="delete"><i class="fas fa-trash-alt"></i></a>
+                    <a href="" class="update"><i class="fas fa-edit"></i></a>
+                </div>
             </div>
+        {{/each}}
     </div>
-    <div class="miembros-footer">
-        
-    </div>
+    
 </div>
