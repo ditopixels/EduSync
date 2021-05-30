@@ -10,7 +10,7 @@
         width: 100%;
         padding-bottom: 1rem;
         display: grid;
-        grid-template-columns: auto 2fr 1fr 1fr 1fr auto;
+        grid-template-columns: auto 2fr repeat(3, 1fr) auto;
         grid-auto-rows: auto;
         overflow-y: auto;
         row-gap: .75rem;
@@ -52,10 +52,24 @@
     }
 }
 
+.miembros-tools-advanced {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap;
+    color: $text;
+    >span {
+        width: 100%;
+    }
+}
+
 .miembro {
     display: grid;
     grid-column: span 6;
     column-gap: .5rem;
+    grid-template-columns: auto 2fr repeat(3, 1fr) auto;
     grid-template-columns: subgrid;
     color: $text;
     align-items: center;

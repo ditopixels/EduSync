@@ -1,9 +1,7 @@
 <div class="miembros">
-
     <header class="miembros-header">
         <h3>Miembros</h3>
     </header>
-
     <div class="miembros-tools">
         <div class="methods">
             <button class="link-blue" id="import">
@@ -17,7 +15,14 @@
         </div>
         {{>search placeholder="Buscar miembro, grupo, rol..."}}
     </div>
-
+    <div class="miembros-tools-advanced">
+        <span>dsadjasnjkdas.excel</span>
+        <div>
+            <button class="button-ghost" id="p-r">Subir y remplazar</button>
+            <button class="button-ghost" id="p-r">Subir y remplazar</button>
+            <button class="button-ghost-second" id="p-r">Cancelar</button>
+        </div>
+    </div>
     <div class="miembros-content">
         {{#each members}}
             <div class="miembro">
@@ -25,7 +30,7 @@
                 <a class="link-blue" href="/user/{{this._id}}">{{this.username}}</a>
                 <span class="first-color">{{this.rol}}</span>
                 <span>{{this.course}}A</span>
-                <span>{{this.status}}</span>
+                <span>{{this.dni}}</span>
                 <div class="options">
                     <a href="{{this._id}}" class="delete"><i class="fas fa-trash-alt"></i></a>
                     <a href="" class="update"><i class="fas fa-edit"></i></a>
@@ -33,5 +38,5 @@
             </div>
         {{/each}}
     </div>
-    
 </div>
+<script src="{{host}}/js/members.js"></script>

@@ -14,6 +14,9 @@ export const renderMember = async(req, res) => {
             partial: () => `rol/admin/miembros`,
             args: { class: "pad" }
         },
+        data: {
+            username: req.user.username
+        },
         members: []
     }
     members.forEach(member => {

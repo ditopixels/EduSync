@@ -35,6 +35,22 @@
     }
 }
 
+.button-ghost-second {
+    padding: 6px 24px;
+    border-radius: 6px;
+    border: 2px solid $thirdColor;
+    text-decoration: none;
+    color: $thirdColor;
+    display: inline-block;
+    margin: auto 0;
+    transition: .3s background-color;
+    &:hover {
+        background-color: $thirdColor;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
 .link-gray {
     color: rgba(0, 0, 0, .7);
     text-decoration: none;
